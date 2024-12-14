@@ -1,0 +1,140 @@
+#fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e1e2e4;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+    
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-family: 'Ruda', 'Rubik', Arial, Helvetica, sans-serif;
+  font-size: 1.2em; /* Увеличил размер заголовка */
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.user-section {
+  margin-left: 350px; /* Отступ от текста */
+  display: flex;
+  align-items: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.user-menu {
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.user-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.arrow {
+  margin-left: 5px;
+  font-size: 18px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+.user-logout {
+  position: relative; /* Необходимо для абсолютного позиционирования .dropdown */
+  display: inline-block; /* Важно для корректного позиционирования */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  }
+  
+  .user-logout .dropdown {
+    display: none; /* Скрываем по умолчанию */
+    position: absolute;
+    top: 100%; /* Базовое позиционирование под .user-logout */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #e1e2e4;
+    border-radius: 7px;
+    list-style: none;
+    padding: 0;
+    z-index: 1001; /* Важно для отображения поверх других элементов */
+  }
+  
+  .user-logout .dropdown.show {
+    display: block; /* Показываем, когда есть класс "show" */
+  }
+  
+  .user-logout .dropdown li {
+    padding: 10px 15px;
+  }
+  
+  .user-logout .dropdown li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .user-logout .user-link {
+    cursor: pointer; /* Указывает на то, что это кликабельный элемент */
+  }
+  

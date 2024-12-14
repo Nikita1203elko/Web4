@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #EDEEF0;
+    margin: 0;
+    padding: 0;
+    font-family: Ruda, Rubik, Arial, Helvetica, sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Стили для чата */
+#chat-container {
+    display: flex;
+    height: calc(100vh - 170px); /* Адаптивная высота */
+    width: 75%;
+    margin: 30px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-left: 22%;
+    margin-top: 70px;
+    
+}
+
+#user-list {
+    border-radius: 25px;
+    width: 25%;
+    background-color: white;
+    padding: 10px;
+    border-right: 1px solid #eee;
+    overflow-y: auto;
+}
+
+#user-list h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+#all-users {
+    list-style: none;
+    padding: 0;
+}
+
+#all-users li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+#all-users li.selected {
+    background-color: #f0f2f5;
+}
+
+.page{
+    width: 800px;
+    overflow-y: scroll;
+    transform:rotateX(180deg);
+                   -moz-transform:rotateX(180deg); /* Mozilla */
+                   -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+                   -ms-transform:rotateX(180deg); /* IE 9+ */
+                   -o-transform:rotateX(180deg); /* Opera */
+   }
+   .sub{
+    
+      transform:rotateX(180deg);
+                   -moz-transform:rotateX(180deg); /* Mozilla */
+                   -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+                   -ms-transform:rotateX(180deg); /* IE 9+ */
+                   -o-transform:rotateX(180deg); /* Opera */
+   }
+
+
+
+#chat-messages div { 
+    margin: 10px; 
+    padding: 10px; 
+    font-weight: bold; 
+    border: 1px solid #353746; /* Цвет обводки */ 
+    border-radius: 5px; /* Закругление углов */  
+    background-color: #fff;
+    color: #353746; /* Цвет текста сообщения */ 
+} 
+#chat-messages div:hover { 
+    background-color: #e5ebf3; /* Измененный цвет фона при наведении */ 
+}
+
+#chat-messages {
+    border-radius: 25px;
+    flex-grow: 1;
+    background-color: white;
+    padding: 10px;
+    overflow-y: auto;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+
+
+#chat-messages h3 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #555;
+}
+
+#message-input {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 74%;
+    margin-bottom: 30px;
+    margin-right: 35px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+#message-input input {
+    margin-left: 30%;
+    margin-top: auto;
+    max-width: 50%;
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+#message-input input[type="text"] {
+    font-family: Ruda, Rubik, Arial, Helvetica, sans-serif;
+    border: 2px solid #68C8FB;
+    border-radius: 6px;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #212121;
+    box-sizing: border-box;
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#message-input input:focus {
+    outline: none;
+    border-color: #4285f4;
+    box-shadow: 0 0 3px #4285f4;
+}
+
+
+#message-input button {
+    width: 150px;
+    height: 45px;
+    background-color: #68C8FB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#message-input button:hover {
+    background-color: #4285f4;
+}
+
+/* Анимация для сообщений */ 
+@keyframes fadeIn { 
+    from { 
+        opacity: 0; 
+    } 
+    to { 
+        opacity: 1; 
+    } 
+}
+
+
+
+
+
+
+/* МЕНЮ НЕ ТРОГАТЬ */
+.menu {
+    z-index: 1001;
+    position: fixed;
+    list-style: none;
+    padding: 0;
+    margin-left: 10%;
+    margin-top: 1%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    font-family: Ruda, Rubik, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+#item1::before {
+    background-image: url(../images/profile-icon.png);
+    background-size: cover;
+}
+
+#item2::before {
+    background-image: url(../images/news-feed-icon.png);
+    background-size: cover;
+}
+
+#item3::before {
+    background-image: url(../images/chat-icon.png);
+    background-size: cover;
+}
+
+#item4::before {
+    background-image: url(../images/admin.png);
+    background-size: cover;
+}
+
+
+
+.admin-menu {
+    position: relative;
+}
+
+.admin-dropdown {
+    
+    display: none;
+    position: absolute;
+    left: auto; /* Убираем автоматическое выравнивание слева */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 40%;
+    margin-bottom: 100%;
+}
+
+.admin-menu:hover .admin-dropdown {
+    display: block;
+}
+
+/* Дополнительные стили (по желанию) */
+.admin-dropdown li {
+    padding: 5px 10px;
+}
+
+.admin-dropdown a {
+    display: block;
+    text-decoration: none;
+    text-decoration: none;
+}

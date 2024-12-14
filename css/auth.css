@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+body {
+  font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+    display: flex;
+    justify-content: center; /* Центрирование по вертикали */
+}
+
+.sign img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sign h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: black;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 350px;
+    margin-bottom: 15px;
+}
+
+.input-wrapper input {
+    font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+    border: 2px solid #68C8FB;
+    border-radius: 6px;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #212121;
+    box-sizing: border-box;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #4285f4;
+    box-shadow: 0 0 3px #4285f4;
+}
+
+.input-wrapper label {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    pointer-events: none; /* Чтобы метка не мешала кликам */
+    color: #777;
+    background-color: #f5f5f5; /* Фон для label */
+    padding: 0 5px; /* Отступы для label */
+    transition: all 0.2s ease-in-out;
+    transform: translateY(10px); /* Сдвиг label */
+}
+
+.input-wrapper input:focus + label {
+    transform: translateY(-10px) scale(0.8);
+    color: #4285f4; /* Изменение цвета при фокусе */
+}
+
+.button-container {
+    display: flexbox;
+    gap: 1px;
+    margin-top: 15px;
+}
+
+.button-container button {
+    width: 350px;
+    font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background-color: #2196f3;
+    border: 0px;
+    border-radius: 6px;
+    color: white;
+}
+
+.button-container button:hover {
+    background-color: #1976d2;
+}
+li {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+}
+a:hover {
+    color: #777;
+}

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #EDEEF0;
+    font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    z-index: 1;
+    position: fixed;
+    list-style: none;
+    padding: 0;
+    margin-left: 165px;
+    margin-top: 100px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+.menu li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+
+.menu li a{
+    font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+#item1::before {
+    background-image: url(../images/profile-icon.png);
+    background-size: cover;
+}
+
+#item2::before {
+    background-image: url(../images/news-feed-icon.png);
+    background-size: cover;
+}
+
+#item3::before {
+    background-image: url(../images/chat-icon.png);
+    background-size: cover;
+}
+
+#item4::before {
+    background-image: url(../images/admin.png);
+    background-size: cover;
+}
+
+
+
+.admin-menu {
+    position: relative;
+}
+
+.admin-dropdown {
+    
+    display: none;
+    position: absolute;
+    left: auto; /* Убираем автоматическое выравнивание слева */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 40%;
+    margin-bottom: 100%;
+}
+
+.admin-menu:hover .admin-dropdown {
+    display: block;
+}
+
+/* Дополнительные стили (по желанию) */
+.admin-dropdown li {
+    padding: 5px 10px;
+}
+
+.admin-dropdown a {
+    display: block;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+
+
+#edit-profile-form {
+    display: flex;
+    z-index: -1;
+    flex-direction: column;
+    margin-top: 80px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Максимальная ширина блока */
+    margin-left: 350px;
+}
+
+#edit-profile-form input[type="text"],
+#edit-profile-form input[type="email"],
+#edit-profile-form input[type="password"],
+#edit-profile-form textarea {
+  border: 2px solid #68C8FB; /* Голубая рамка */
+  padding: 5px;
+  width: 200px; /* Максимальная ширина */
+  box-sizing: border-box; /* Включаем padding в ширину */
+  transition: border-color 0.3s ease; /* Плавный переход цвета рамки */
+  border-radius: 5px;
+}
+
+#edit-profile-form input[type="text"]:focus,
+#edit-profile-form input[type="email"]:focus,
+#edit-profile-form input[type="password"]:focus,
+#edit-profile-form textarea:focus {
+  border-color: #4285f4; /* Темно-голубая рамка при фокусе */
+  outline: none; /* Убираем стандартное выделение */
+}
+
+
+  
+#edit-profile-form input,
+#edit-profile-form textarea {
+    margin-bottom: 3px; /* Отступ снизу от поля ввода */
+}
+
+
+
+.button-container {
+    display: flexbox;
+    gap: 1px;
+    margin-top: 15px;
+}
+
+.button-container button {
+    width: 150px;
+    font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background-color: #2196f3;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+}
+
+.button-container button:hover {
+    background-color: #1976d2;
+}

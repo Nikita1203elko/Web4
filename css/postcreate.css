@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #EDEEF0;
+    font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+    overflow-y: scroll; /* Добавляем вертикальную прокрутку */
+}
+.menu {
+    z-index: 1;
+    position: fixed;
+    list-style: none;
+    padding: 0;
+    margin-left: 15%;
+    margin-top: 6%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+.menu li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+
+.menu li a{
+    font-family: Ruda,Rubik,Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+#item1::before {
+    background-image: url(../images/profile-icon.png);
+    background-size: cover;
+}
+
+#item2::before {
+    background-image: url(../images/news-feed-icon.png);
+    background-size: cover;
+}
+
+#item3::before {
+    background-image: url(../images/chat-icon.png);
+    background-size: cover;
+}
+
+
+
+.create-post {
+    z-index: 2;
+    background-color: #fff;
+    position: fixed;
+    height: 90%;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-left: 27%;
+    margin-top: 6%;
+}
+.post-tt {
+    position: relative; /* Важно! Устанавливаем относительное позиционирование для родительского элемента */
+}
+
+.post-tt h1 {
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.post-tt a {
+    color: black;
+    text-decoration: none;
+    position: absolute; /* Абсолютное позиционирование */
+    top:10px;
+    margin-left: 15px;
+
+}
+
+form label {
+    display: block;
+    padding: 10px;
+}
+
+
+form input[type="text"], 
+form textarea { 
+    width: 20%; 
+    margin-left: 10px;
+    padding: 20px; 
+    border: 2px solid #68C8FB;
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    opacity: 0; /* Начальная непрозрачность */ 
+    animation: fadeInUp 0.5s ease forwards; 
+} 
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #4285f4;
+    box-shadow: 0 0 3px #4285f4;
+}
+
+form textarea { 
+    height: 100px; /* Увеличиваем высоту поля для содержания */ 
+}
+
+
+form button[type="submit"] { 
+    margin-left: 10px;
+    background: #68C8FB; /* Чуть темнее желтого */ 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+    opacity: 0; /* Начальная непрозрачность */ 
+    animation: fadeInUp 0.5s ease forwards; 
+} 
+form button[type="submit"]:hover { 
+    background: #4285f4; 
+}
+
+
+
+
+.file-upload-label {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border: 2px solid #68C8FB;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block; /* Make it a block element to fill the width */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Make it clickable */
+    animation: fadeInUp 0.5s ease forwards;
+    position: relative; /* To position the input absolutely */
+}
+
+.file-upload-label input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hide the default input */
+    cursor: pointer; /* Make it clickable */
+}
+
+.file-upload-label input[type="file"]:focus + * {
+    outline: none;
+    border-color: #4285f4; /* Yellow color on focus */
+}
+
+.file-upload-label input[type="file"]:hover + * {
+    border-color: #4285f4; /* Yellow color on hover */
+}
+
+.file-upload-label input[type="file"]::-webkit-file-upload-button {
+    display: none; /* Hide the default button */
+}
+
+
+
+/* Анимация */ 
+@keyframes fadeIn { 
+    from { 
+        opacity: 0; 
+    } 
+    to { 
+        opacity: 1; 
+    } 
+} 
+@keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    } 
+    50% { 
+        opacity: 0.5; 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+}
